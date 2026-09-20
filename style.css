@@ -456,3 +456,272 @@ h1 span {
     }
 
 }
+/* =========================
+   SELECTED WORK
+========================= */
+
+.work {
+    min-height: 100vh;
+    padding: 140px 5vw 160px;
+
+    border-top: 1px solid #2A2023;
+}
+
+.work-heading {
+    max-width: 1200px;
+    margin: 110px auto 140px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.work-heading h2 {
+    font-size: clamp(70px, 10vw, 150px);
+    line-height: 0.78;
+
+    font-weight: 500;
+    letter-spacing: -7px;
+}
+
+.work-heading h2 span {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #8F1D3D;
+}
+
+.work-heading p {
+    max-width: 330px;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: #A69DA0;
+}
+
+
+/* =========================
+   PROJECT
+========================= */
+
+.project {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    min-height: 480px;
+
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr;
+
+    border-top: 1px solid #2A2023;
+
+    position: relative;
+
+    transition: background 0.5s ease;
+}
+
+.project:last-child {
+    border-bottom: 1px solid #2A2023;
+}
+
+.project:hover {
+    background: #0E090B;
+}
+
+.project-number {
+    padding-top: 35px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    color: #8F1D3D;
+}
+
+.project-info {
+    padding: 70px 50px 70px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-category {
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    color: #8F1D3D;
+
+    margin-bottom: 25px;
+}
+
+.project-info h3 {
+    font-size: clamp(38px, 4vw, 65px);
+    font-weight: 500;
+
+    letter-spacing: -3px;
+}
+
+.project-description {
+    max-width: 430px;
+
+    margin-top: 25px;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: #A69DA0;
+}
+
+.project-links {
+    display: flex;
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+.project-link {
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    color: #F3EEEE;
+
+    border-bottom: 1px solid #5A1028;
+
+    padding-bottom: 7px;
+
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #8F1D3D;
+}
+
+
+/* =========================
+   PROJECT VISUALS
+========================= */
+
+.project-visual {
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+.project-placeholder {
+    width: 100%;
+    height: 330px;
+
+    border: 1px solid #3A242B;
+
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            rgba(143, 29, 61, 0.35),
+            transparent 55%
+        ),
+        #10090C;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.6s ease,
+        border-color 0.6s ease;
+}
+
+.project:hover .project-placeholder {
+    transform: scale(1.025);
+    border-color: #8F1D3D;
+}
+
+.project-placeholder span {
+    font-size: 28px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.project-placeholder small {
+    margin-top: 15px;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+
+    color: #8F1D3D;
+}
+
+.aero {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(143, 29, 61, 0.28),
+            transparent 55%
+        ),
+        #0B0809;
+}
+
+.cleaner {
+    background:
+        linear-gradient(
+            135deg,
+            #10090C,
+            #180C10
+        );
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .work {
+        padding-top: 90px;
+    }
+
+    .work-heading {
+        margin: 80px auto 90px;
+
+        display: block;
+    }
+
+    .work-heading h2 {
+        letter-spacing: -4px;
+    }
+
+    .work-heading p {
+        margin-top: 50px;
+    }
+
+    .project {
+        grid-template-columns: 45px 1fr;
+    }
+
+    .project-info {
+        padding: 60px 20px 30px 15px;
+    }
+
+    .project-visual {
+        grid-column: 2;
+
+        padding: 20px 20px 50px 15px;
+
+        min-height: auto;
+    }
+
+    .project-placeholder {
+        height: 260px;
+    }
+
+}
