@@ -308,3 +308,151 @@ h1 span {
     }
 
 }
+/* =========================
+   HOW I THINK
+========================= */
+
+.thinking {
+    min-height: 100vh;
+    padding: 140px 5vw 120px;
+
+    border-top: 1px solid #2A2023;
+
+    position: relative;
+}
+
+.section-label {
+    display: flex;
+    gap: 25px;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    color: #6F6569;
+}
+
+.section-label span:first-child {
+    color: #8F1D3D;
+}
+
+.thinking-content {
+    max-width: 1100px;
+
+    margin: 120px auto 0;
+}
+
+.thinking h2 {
+    font-size: clamp(45px, 6vw, 90px);
+    line-height: 0.95;
+
+    font-weight: 500;
+    letter-spacing: -3px;
+}
+
+.thinking h2 span {
+    color: #8F1D3D;
+}
+
+.second-line {
+    margin-top: 25px;
+    text-align: right;
+}
+
+.thinking-description {
+    max-width: 500px;
+
+    margin: 70px 0 0 auto;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: #A69DA0;
+}
+
+.thinking-pillars {
+    max-width: 1200px;
+
+    margin: 140px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid #2A2023;
+}
+
+.pillar {
+    padding: 35px 30px;
+
+    border-right: 1px solid #2A2023;
+
+    transition: background 0.4s ease;
+}
+
+.pillar:first-child {
+    border-left: 1px solid #2A2023;
+}
+
+.pillar:hover {
+    background: #110B0E;
+}
+
+.pillar-number {
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: #8F1D3D;
+}
+
+.pillar h3 {
+    margin-top: 45px;
+
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.pillar p {
+    margin-top: 20px;
+
+    max-width: 250px;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    color: #A69DA0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .thinking {
+        padding-top: 90px;
+    }
+
+    .thinking-content {
+        margin-top: 80px;
+    }
+
+    .thinking h2 {
+        letter-spacing: -2px;
+    }
+
+    .second-line {
+        text-align: left;
+    }
+
+    .thinking-pillars {
+        grid-template-columns: 1fr;
+
+        margin-top: 90px;
+    }
+
+    .pillar,
+    .pillar:first-child {
+        border-left: 1px solid #2A2023;
+        border-right: 1px solid #2A2023;
+        border-bottom: 1px solid #2A2023;
+    }
+
+}
