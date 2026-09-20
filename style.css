@@ -1,1 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
 
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080708;
+    color: #F3EEEE;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    width: 100%;
+    padding: 30px 5vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #2A2023;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #A69DA0;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #F3EEEE;
+}
+
+.nav-status {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #8F1D3D;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 80px);
+
+    padding: 8vh 5vw;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    position: relative;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #8F1D3D;
+
+    margin-bottom: 35px;
+}
+
+h1 {
+    font-size: clamp(55px, 7vw, 105px);
+    line-height: 0.92;
+    font-weight: 500;
+    letter-spacing: -4px;
+}
+
+h1 span {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #8F1D3D;
+}
+
+.hero-description {
+    max-width: 430px;
+
+    margin-top: 40px;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #A69DA0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 45px;
+}
+
+.btn {
+    padding: 15px 22px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    border: 1px solid #3A2A30;
+
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #5A1028;
+    border-color: #5A1028;
+}
+
+.btn-primary:hover {
+    background: #8F1D3D;
+}
+
+.btn-secondary:hover {
+    background: #1A1215;
+}
+
+
+/* =========================
+   HERO VISUAL
+========================= */
+
+.hero-visual {
+    height: 550px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orb {
+    width: 310px;
+    height: 310px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #8F1D3D,
+            #5A1028 40%,
+            #16090D 70%,
+            #080708 100%
+        );
+
+    box-shadow:
+        0 0 100px rgba(143, 29, 61, 0.25);
+
+    animation: float 6s ease-in-out infinite;
+}
+
+.orb-ring {
+    position: absolute;
+
+    border: 1px solid #5A1028;
+
+    border-radius: 50%;
+
+    transform: rotate(-20deg);
+}
+
+.ring-one {
+    width: 420px;
+    height: 170px;
+}
+
+.ring-two {
+    width: 470px;
+    height: 210px;
+
+    transform: rotate(55deg);
+}
+
+.visual-label {
+    position: absolute;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    color: #6F6569;
+}
+
+.label-top {
+    top: 20px;
+    right: 20px;
+}
+
+.label-bottom {
+    bottom: 20px;
+    left: 20px;
+}
+
+
+/* =========================
+   SCROLL
+========================= */
+
+.scroll-indicator {
+    position: absolute;
+
+    bottom: 25px;
+    left: 5vw;
+
+    display: flex;
+    gap: 15px;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    color: #6F6569;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+    }
+
+    .hero-visual {
+        height: 400px;
+    }
+
+    .orb {
+        width: 230px;
+        height: 230px;
+    }
+
+    .ring-one {
+        width: 320px;
+        height: 130px;
+    }
+
+    .ring-two {
+        width: 350px;
+        height: 160px;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+
+}
