@@ -725,3 +725,132 @@ h1 span {
     }
 
 }
+/* ================================
+   PROJECT VISUALS
+================================ */
+
+.project-image .project-visual {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #0d0a0c;
+}
+
+.project-image .project-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(.2,.8,.2,1);
+}
+
+.project-image:hover .project-visual img {
+    transform: scale(1.04);
+}
+
+
+/* Reverse layout */
+
+.project.reverse {
+    grid-template-columns: 0.85fr 1.15fr;
+}
+
+.project.reverse .project-info {
+    order: 2;
+}
+
+.project.reverse .project-visual {
+    order: 1;
+}
+
+
+/* Dataset Cleaner */
+
+.project-text {
+    min-height: 430px;
+}
+
+.dataset-visual {
+    min-height: 380px;
+    border: 1px solid var(--border);
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(143, 29, 61, 0.22),
+            transparent 55%
+        ),
+        #0d0a0c;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dataset-symbol {
+    font-family: "Playfair Display", serif;
+    font-size: 110px;
+    line-height: 1;
+    color: var(--accent);
+    opacity: 0.85;
+
+    animation: floatSymbol 4s ease-in-out infinite;
+}
+
+.dataset-visual span {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--muted);
+}
+
+.dataset-line {
+    width: 120px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.5;
+    position: relative;
+}
+
+.dataset-line::after {
+    content: "→";
+    position: absolute;
+    right: -25px;
+    top: -10px;
+    color: var(--accent);
+    font-size: 16px;
+}
+
+@keyframes floatSymbol {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .project,
+    .project.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .project.reverse .project-info,
+    .project.reverse .project-visual {
+        order: initial;
+    }
+
+    .project-visual,
+    .dataset-visual {
+        min-height: 280px;
+    }
+
+}
